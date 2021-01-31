@@ -106,6 +106,10 @@
                               $allpaid_delivery_fees += ($item->delivery_fees+$item->other_fees);
                             }
 
+                            if ($item->os_pay_amount > 0) {
+                              $allpaid_delivery_fees += $item->os_pay_amount;
+                            }
+
                             if ($item->paystatus != "2") {
                               $notallpaid_deposit += $item->deposit;
                             }
