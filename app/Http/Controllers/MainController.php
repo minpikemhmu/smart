@@ -293,9 +293,29 @@ class MainController extends Controller
 
       foreach ($expenses as $row) {
         $expense = Expense::where('pickup_id',$row->id)->first();
-        $expense->status = 2;
-        $expense->save();
+        if ($expense) {
+          $expense->status = 2;
+          $expense->save();
+        }else{
+          $role=Auth::user()->roles()->first();
+          $rolename=$role->name;
 
+          $expense = new Expense;
+          $expense->amount=$row->amount;
+          $expense->client_id=$request->client;
+          if($rolename=="staff"){
+            $user=Auth::user();
+            $staffid=$user->staff->id;
+            $expense->staff_id=$staffid;
+          }
+          $expense->status=2;
+          $expense->description="Fix Debit List";
+          $expense->pickup_id = $row->id;
+          $expense->city_id=1;
+          $expense->expense_type_id=1;
+          $expense->save();
+        }
+        
         // insert into transaction (expense_id - ဘာနဲ့ရှင်းလိုက်တာလဲ)
         $transaction = new Transaction;
         $transaction->bank_id = $request->payment_method;
