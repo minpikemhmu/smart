@@ -1149,7 +1149,9 @@ public function profit(Request $request){
     $id=$request->id;
     $deliveryman = DeliveryMan::find($id);
     if ($deliveryman->city_id == 1) {
-      $ways = Way::where('delivery_man_id',$id)->with('item.township')->whereDate('created_at', Carbon\Carbon::today())->where('status_code',005)->orderBy('id','desc')->with('item.pickup.schedule.client.user')->get();
+      $ways = Way::where('delivery_man_id',$id)->with('item.township')
+      // ->whereDate('created_at', Carbon\Carbon::today())
+      ->where('status_code',005)->orderBy('id','desc')->with('item.pickup.schedule.client.user')->get();
     }else{
       $ways = Way::where('delivery_man_id',$id)->with('item.township')->where('status_code',005)->orderBy('id','desc')->with('item.pickup.schedule.client.user')->get();
     }
