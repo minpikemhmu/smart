@@ -58,10 +58,14 @@
          	<td>
             <span class="d-block">{{$way->item->codeno}}</span>{{$payment_type}}
           </td>
-          {{-- <td>
-            {{$way->item->pickup->schedule->client->user->name}}<br>
-            ({{$way->item->pickup->schedule->client->phone_no}})
-          </td> --}}
+          <td>
+            @if(isset($way->item->pickup))
+              {{$way->item->pickup->schedule->client->user->name}}<br>
+              ({{$way->item->pickup->schedule->client->phone_no}})
+            @else
+              {{'-'}}
+            @endif
+          </td>
          	
          	<td class="mmfont">
             <span class="d-block">{{strip_tags(zawuni($way->item->receiver_name))}}</span>
