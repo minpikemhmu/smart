@@ -82,7 +82,7 @@
         </tr>
       @endforeach
         <tr>
-          <td colspan="4">Total Amount</td>
+          <td colspan="5">Total Amount</td>
           <td colspan="4">{{number_format($total)}} Ks</td>
         </tr>
     </tbody>
