@@ -25,7 +25,7 @@
       <tr>
       	<th>No</th>
         <th>Codeno</th>
-        {{-- <th>Client Info</th> --}}
+        <th>Client Info</th>
         <th>Receiver Info</th>
         <th>Receiver Address</th>
         <th>Item Price</th>
