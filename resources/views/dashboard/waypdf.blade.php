@@ -25,7 +25,7 @@
       <tr>
       	<th>No</th>
         <th>Codeno</th>
-        <th>Client Info</th>
+        {{-- <th>Client Info</th> --}}
         <th>Receiver Info</th>
         <th>Receiver Address</th>
         <th>Item Price</th>
@@ -58,10 +58,10 @@
          	<td>
             <span class="d-block">{{$way->item->codeno}}</span>{{$payment_type}}
           </td>
-          <td>
+          {{-- <td>
             {{$way->item->pickup->schedule->client->user->name}}<br>
             ({{$way->item->pickup->schedule->client->phone_no}})
-          </td>
+          </td> --}}
          	
          	<td class="mmfont">
             <span class="d-block">{{strip_tags(zawuni($way->item->receiver_name))}}</span>
@@ -78,7 +78,7 @@
         </tr>
       @endforeach
         <tr>
-          <td colspan="5">Total Amount</td>
+          <td colspan="4">Total Amount</td>
           <td colspan="4">{{number_format($total)}} Ks</td>
         </tr>
     </tbody>
