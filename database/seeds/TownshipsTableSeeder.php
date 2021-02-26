@@ -331,55 +331,55 @@ class TownshipsTableSeeder extends Seeder
 
       // complete (in direct delivery)
 
-      Township::create([
-        'name' => 'Mandalay Gate',
-        'delivery_fees' =>'1000',
+      // Township::create([
+      //   'name' => 'Mandalay Gate',
+      //   'delivery_fees' =>'1000',
         
-      ]);
+      // ]);
 
-      Township::create([
-        'name' => 'Pyay Gate',
-        'delivery_fees' =>'1000',
+      // Township::create([
+      //   'name' => 'Pyay Gate',
+      //   'delivery_fees' =>'1000',
 
-      ]);
+      // ]);
 
-      Township::create([
-        'name' => 'Naypyitaw Gate',
-        'delivery_fees' =>'1000',
+      // Township::create([
+      //   'name' => 'Naypyitaw Gate',
+      //   'delivery_fees' =>'1000',
         
-      ]);
+      // ]);
 
-      Township::create([
-        'name' => 'Taunggyi Gate',
-        'delivery_fees' =>'1000',
+      // Township::create([
+      //   'name' => 'Taunggyi Gate',
+      //   'delivery_fees' =>'1000',
 
-      ]);
+      // ]);
 
-      // complete gate
+      // // complete gate
 
-      Township::create([
-        'name' => 'Mandalay Post Office',
-        'delivery_fees' =>'1000',
+      // Township::create([
+      //   'name' => 'Mandalay Post Office',
+      //   'delivery_fees' =>'1000',
 
-      ]);
+      // ]);
 
-      Township::create([
-        'name' => 'Pyay Post Office',
-        'delivery_fees' =>'1000',
+      // Township::create([
+      //   'name' => 'Pyay Post Office',
+      //   'delivery_fees' =>'1000',
         
-      ]);
+      // ]);
 
-      Township::create([
-        'name' => 'Naypyitaw Post Office',
-        'delivery_fees' =>'1000',
+      // Township::create([
+      //   'name' => 'Naypyitaw Post Office',
+      //   'delivery_fees' =>'1000',
 
-      ]);
+      // ]);
 
-      Township::create([
-        'name' => 'Taunggyi Post Office',
-        'delivery_fees' =>'1000',
+      // Township::create([
+      //   'name' => 'Taunggyi Post Office',
+      //   'delivery_fees' =>'1000',
 
-      ]);
+      // ]);
 
       // complete post office
     }
